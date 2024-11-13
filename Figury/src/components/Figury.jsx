@@ -53,7 +53,7 @@ function Figury() {
   return (
     <>
       <h1 className="text-center mt-5">Oblicz pole wybranej figury</h1>
-
+    <div className='m-5'>
       <select
         className="form-select mt-5 p-2 mx-auto"
         onChange={(e) => setFigure(e.target.value)}
@@ -132,7 +132,7 @@ function Figury() {
       )}
 
       <button
-        className="btn btn-outline-secondary text-center mt-2 p-2 mx-auto w-100"
+        className="btn btn-outline-secondary text-center m-3 p-2 mx-auto w-100"
         onClick={calculateArea}
       >
         Oblicz pole
@@ -141,6 +141,7 @@ function Figury() {
       <p className="fs-2 mx-auto text-center mt-5 w-100">
         {result !== null && <div>Pole to: {result.toFixed(2)}cm²</div>}
       </p>
+      </div>
     </>
   );
 }
